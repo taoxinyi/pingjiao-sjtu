@@ -11,19 +11,17 @@
 (function() {
     'use strict';
     let previousHash = undefined
-    setInterval(function(){
+    setInterval(function() {
         let currentHash = location.hash
-        if (currentHash!==previousHash){
-            previousHash=currentHash;
+        if (currentHash !== previousHash) {
+            previousHash = currentHash;
             if (currentHash.startsWith('#/answer-paper/'))
-             setTimeout(
-                  function()
-                  {
-                    $('.option-container').each(function(){
-                       $(this).click()
-               })}, 1500);
-
+                setTimeout(
+                    function() {
+                        $('.option-container').each(function() {
+                            $(this).click()
+                        })
+                    }, 1500);
         }
-
-}, 1000);
+    }, 1000);
 })();
